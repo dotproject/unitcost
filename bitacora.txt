@@ -79,6 +79,7 @@ SUM(task_total_cost * %complete) / SUM(task_total_cost)
 14/08/06 Estudiar posibilidad de outer join en projects.class.php L75
 	 Listo 14/08/06 11:56PM se dejó inner join por ahora
 14/08/06 Documentación
+	 Listo 16/08/06 3:08AM
 14/08/06 Hay que verificar el locale del modulo
 	 Próxima versión
 15/08/06 Log cuando no tiene extended cost info
