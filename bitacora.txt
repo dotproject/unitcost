@@ -1,0 +1,107 @@
+
+--------------------------
+Recomendaciones del Modulo
+--------------------------
+-Aunque el módulo lo soporta, no se debe permitir borrar ni editar task logs
+
+
+------------------------
+Updates a la bd original
+------------------------
+todos los campos financieros a 15,2
+campo de percent complete a decimal 4,2
+
+
+-------------------------
+Cambios Listas de Valores
+-------------------------
+
+Referencia del task log ahora tiene:
+------------------------------------
+- Advance Report
+- Valuation
+- Invoice
+- Payment
+
+
+------------------------------------
+Formula de Percent Complete Original
+------------------------------------
+SUM(t1.task_duration * t1.task_percent_complete * IF(t1.task_duration_type = 24, ".$working_hours.", t1.task_duration_type))/
+SUM(t1.task_duration * IF(t1.task_duration_type = 24, ".$working_hours.", t1.task_duration_type)) AS project_percent_complete");
+
+ojo: task_duration_type es 24 si es por día y 1 si es por hora.
+
+es decir (en horas - ver ojo arriba):
+SUM(task_duration * %complete) / SUM(task_duration)
+
+Ejemplo:
+
+Avance Proyecto: 41.5%
+
+Tareas
+------
+100 * 0.05 = 5
+150 * 0.10 = 15
+200 * 0.90 = 180
+50  * 0.15 = 7.5
+             -----
+             207.5
+
+207.5/500 = 0.415
+
+Formula propuesta para Cost Percent Complete
+--------------------------------------------
+SUM(task_total_cost * %complete) / SUM(task_total_cost)
+
+
+-------------------------------
+             TO-DO
+-------------------------------
+10/08/06 Falta formalizar todo el código que está en dosql a la clase
+	 Listo 14/08/06 11:27PM
+10/08/06 Validaciones y pruebas integrales
+	 Listo 15/08/06 4:02PM	 
+10/08/06 Eliminar Campo de avance en la tarea, mejor, ponerlo RO
+	 Listo 15/08/06 12:15AM
+10/08/06 Cálculo de Avance por Costo
+	 Listo 14/08/06 04:20PM
+10/08/06 Poner read only campo presupuesto real (editar proyecto)
+	 Listo 14/08/06 11:55PM
+10/08/06 Poner todos los errores de JS locale bonitos arriba
+	 Listo 15/08/06 12:09AM
+14/08/06 Faltan UPDATES y DELETES!!!
+	 Listo 14/08/06 11:55PM
+14/08/06 Hay algo con el redondeo del decimal en en task_log percen_complete
+	 Listo 14/08/06 04:02PM
+14/08/06 Faltan los updates de las columnas originales en el setup!
+	 Listo 15/08/06 04:02PM
+14/08/06 Estudiar posibilidad de outer join en projects.class.php L75
+	 Listo 14/08/06 11:56PM se dejó inner join por ahora
+14/08/06 Documentación
+14/08/06 Hay que verificar el locale del modulo
+	 Próxima versión
+15/08/06 Log cuando no tiene extended cost info
+	 Listo 15/05/06 3:20PM
+15/08/06 El return false no hace nada en checkOther
+	 Listo 15/08/06 2:47PM
+15/08/06 Accumulated task cost javasritp asegurar 2 decimales
+	 Listo 15/08/06
+
+
+---------------------------------------
+Archivos Modificados V1.0 version 2.0.3
+---------------------------------------
+./modules/tasks/do_updatetask.php - ok
+./modules/tasks/vw_log_update.php - ok
+./modules/tasks/tasks.class.php - ok
+./modules/tasks/addedit.php - ok
+./modules/projects/view.php - ok
+./modules/projects/addedit.php - ok
+./modules/projects/projects.class.php -ok
+
+
+
+
+
+

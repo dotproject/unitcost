@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Known bugs and limitations</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="      dotProject Unitcost Module
+    "
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Technical Documentation"
+HREF="c52.html"><LINK
+REL="PREVIOUS"
+TITLE="Database Changes"
+HREF="x169.html"><LINK
+REL="NEXT"
+TITLE="User Documentation"
+HREF="c182.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>dotProject Unitcost Module:       User and Technical Documentation
+    </TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x169.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. Technical Documentation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="c182.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN174"
+>1.6. Known bugs and limitations</A
+></H1
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN176"
+>1.6.1. Version 1.0 / Patch 2.0.3</A
+></H2
+><P
+>	  Reasonable testing has not shown any evident bugs for this
+	  particular release. But there is one issue that was not solved
+	  and its regarding locale. For some reason the module's
+	  specific locale scheme did not work and I simply did not have
+	  time to look further into the issue. You have to translate
+	  to your locale by adding the strings in the Tasks and
+	  Projects section of Translation Management and the patches
+	  to the locale files are not included in this version.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN179"
+>1.6.2. Future Upgrading Issues</A
+></H2
+><P
+>	  Upgrading should work fine except that the data may not fit
+	  in the new database schema, because of the alters that
+	  Unitcost performs on some columns upon installation. It is
+	  recommended to verify this carefully, and backup you
+	  database well before attempting the upgrade. This is an
+	  issue that will have to wait for the next version until we
+	  can provide instructions on how to do this.
+	</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x169.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="c182.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Database Changes</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c52.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>User Documentation</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

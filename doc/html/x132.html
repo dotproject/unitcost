@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Patched Files Detail</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="      dotProject Unitcost Module
+    "
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Technical Documentation"
+HREF="c52.html"><LINK
+REL="PREVIOUS"
+TITLE="Post-Installation and Configuration"
+HREF="x113.html"><LINK
+REL="NEXT"
+TITLE="Database Changes"
+HREF="x169.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>dotProject Unitcost Module:       User and Technical Documentation
+    </TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x113.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. Technical Documentation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x169.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="PATCH-SEC"
+>1.4. Patched Files Detail</A
+></H1
+><P
+>	The following section identifies each patched file and details
+	the exact changes and reasoning behind them. This section will
+	be updated with each new release.
+      </P
+><P
+>	It is very easy to go into each patched file and figure out
+	what the changes are, because we clearly indicate where the
+	patched code is and the original code is left commented in the
+	file for reference. Just <B
+CLASS="COMMAND"
+>grep</B
+> for the
+	string <SPAN
+CLASS="QUOTE"
+>"unitcost module patch start"</SPAN
+> and you will
+	find every single change we made to the original files and you
+	will also be able to check the original code for reference. A
+	simple <B
+CLASS="COMMAND"
+>find . -type f -print0 | xargs -0 -e grep -n
+	-e unitcost\ module\ patch\ start</B
+> should give you a
+	list like the following if run from the top-level
+	<TT
+CLASS="FILENAME"
+>modules</TT
+> directory (right margin cropped
+	for clarity):
+	<PRE
+CLASS="PROGRAMLISTING"
+>	  ./tasks/do_updatetask.php:3:/* unitcost module patch start */
+	  ./tasks/do_updatetask.php:71:/* unitcost module patch start */
+	  ./tasks/do_updatetask.php:98:		/* unitcost module patc
+	  .
+	  .
+	  .
+	  ./tasks/do_updatetask.php:185:		/* unitcost mod
+	  ./projects/addedit.php:329:                               &gt;!
+	  ./projects/projects.class.php:31:	/* unitcost module patc
+	  ./projects/projects.class.php:74:			/* unit
+	</PRE
+>
+      </P
+><DIV
+CLASS="TIP"
+><P
+></P
+><TABLE
+CLASS="TIP"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="../images/tip.gif"
+HSPACE="5"
+ALT="Tip"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+>	  In fact, this is precisely what we did to be able to
+	  complete this section, but of course I used
+	  <SPAN
+CLASS="PRODUCTNAME"
+>emacs</SPAN
+> to easily capture the
+	  output and open the files interactively.
+	</P
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN144"
+>1.4.1. Patch 2.0.3</A
+></H2
+><P
+>	  The following files where modified in the following
+	  lines. To understand each change, just go into the file and
+	  look at the code:
+	  <P
+></P
+><UL
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>tasks/do_updatetask.php</TT
+>,
+		lines: 3, 71, 98 and 185.
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>tasks/vw_log_update.php</TT
+>, lines:
+		4, 72, 155, 185 and 261
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>tasks/tasks.class.php</TT
+>,
+		lines: 93, 1897
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>tasks/addedit.php</TT
+>, line: 285
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>projects/view.php</TT
+>, line: 190
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>projects/addedit.php</TT
+>, line
+		329
+	      </P
+></LI
+><LI
+><P
+>		File:<TT
+CLASS="FILENAME"
+>projects/projects.class.php</TT
+>,
+		lines: 31 and 74
+	      </P
+></LI
+></UL
+>
+	</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x113.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x169.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Post-Installation and Configuration</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c52.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Database Changes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Installation</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="      dotProject Unitcost Module
+    "
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Technical Documentation"
+HREF="c52.html"><LINK
+REL="PREVIOUS"
+TITLE="Technical Documentation"
+HREF="c52.html"><LINK
+REL="NEXT"
+TITLE="Post-Installation and Configuration"
+HREF="x113.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>dotProject Unitcost Module:       User and Technical Documentation
+    </TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="c52.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. Technical Documentation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x113.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN63"
+>1.2. Installation</A
+></H1
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN65"
+>1.2.1. Obtaining the Latest Version</A
+></H2
+><P
+>	  If you are reading this, you should have downloaded the
+	  module and already uncompressed it somewhere. If not, please
+	  goto dotProject's homepage at <A
+HREF="http://dotproject.net"
+TARGET="_top"
+>http://dotproject.net</A
+>
+	  and follow the links to downloads and then to the dotmods
+	  download section at SourceForge. 
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN69"
+>1.2.2. Unpacking</A
+></H2
+><P
+>	  You should have downloaded a file in the form of a
+	  compressed tarball. Copy the file to the
+	  <TT
+CLASS="FILENAME"
+>modules</TT
+> directory of your dotProject
+	  installation and uncompress it there.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN73"
+>1.2.3. Verify and Adjust Ownership of Files</A
+></H2
+><DIV
+CLASS="NOTE"
+><P
+></P
+><TABLE
+CLASS="NOTE"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="../images/note.gif"
+HSPACE="5"
+ALT="Note"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+>	    This manual assumes you are running on Linux, FreeBSD,
+	    MacOSX or other form of Unix or Unix-like operating system,
+	    with Apache 1, 2 or similar httpd server. If not, please
+	    refer to the appropriate documentation.
+	  </P
+></TD
+></TR
+></TABLE
+></DIV
+><P
+>	  If you downloaded from the SourceForge site, all file
+	  permissions should be OK, but we advise you to double check
+	  for your particular http server configuration and security
+	  requirements. You must, however, make sure that the file
+	  ownership corresponds to the correct httpd username, group
+	  and other prerogatives. A simple <B
+CLASS="COMMAND"
+>chmod -R
+	  user.group unitcost/</B
+> will do from the
+	  <TT
+CLASS="FILENAME"
+>modules</TT
+> directory.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN80"
+>1.2.4. Install the Module in dotProject</A
+></H2
+><P
+>	  You must login to dotProject as the administrator and go to
+	  the Modules section of the administrative
+	  applications. Unitcost should be on the list as an
+	  un-installed and inactive module. You may now select the
+	  install link and then the activate link once it's
+	  installed. <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Do not make this module
+	  visible</I
+></SPAN
+>. This module is an add-on to the projects
+	  and tasks modules and has no screens of it's own, so there
+	  is no need, and it would probably break it, if you make it
+	  visible.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN84"
+>1.2.5. Installing the Patched Files</A
+></H2
+><P
+>	  As mentioned earlier, there are some minor changes to
+	  dotProject's standard files that cannot be applied as a
+	  module. For this reason <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>it is fully necessary to
+	  patch your version with the provided files</I
+></SPAN
+>. If
+	  you are in doubt of doing this, please refer to <A
+HREF="x132.html"
+>Section 1.4</A
+> for very precise details on the patched
+	  versions and why they are needed.
+	</P
+><P
+>	  To install the patched files you must go into the
+	  <TT
+CLASS="FILENAME"
+>unitcost</TT
+> module directory and locate
+	  the appropriate patch level. For example if you are running
+	  dotProject version 2.0.3 then the correct patch files will
+	  be located in the directory named
+	  <TT
+CLASS="FILENAME"
+>patch_203</TT
+>. Inside this directory there
+	  will be subdirectories that correspond to your installed
+	  module directories.
+	</P
+><DIV
+CLASS="WARNING"
+><P
+></P
+><TABLE
+CLASS="WARNING"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="../images/warning.gif"
+HSPACE="5"
+ALT="Warning"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+>	    Before copying the files to the actual module directories
+	    we recommend that you backup or rename these files in the
+	    original directories in case that you want to roll-back
+	    the installation. Take care when renaming files in each
+	    module's directories because the dotProject framework may
+	    interpret some file names automatically and try to load
+	    them. It is recommended you rename the files with a safe
+	    set of leading characters such as
+	    <TT
+CLASS="FILENAME"
+>XXX_UNITCOST_foo.php</TT
+> where
+	    <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>foo</I
+></SPAN
+> is the original filename, for
+	    example <TT
+CLASS="FILENAME"
+>XXX_UNITCOST_addedit.php</TT
+> for
+	    the original <TT
+CLASS="FILENAME"
+>addedit.php</TT
+> file.
+	  </P
+></TD
+></TR
+></TABLE
+></DIV
+><P
+>	  Once you have backed up or renamed the original files, you
+	  may proceed to copy the patched versions into the
+	  corresponding directories.
+	</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN99"
+>1.2.6. Logout, Clear Browser Cache and Test</A
+></H2
+><P
+>	  It is important that you logout from dotProject and clear
+	  all the cache or your browser to make sure that all the
+	  cached JavaScript is cleared away, before login in again. Up
+	  to <SPAN
+CLASS="PRODUCTNAME"
+>Firefox</SPAN
+> version 1.0.7 you have
+	  to go to
+	  <SPAN
+CLASS="GUIMENU"
+>Edit</SPAN
+>-&gt;<SPAN
+CLASS="GUIMENUITEM"
+>Preferences</SPAN
+>
+	  and then select <SPAN
+CLASS="GUIICON"
+>Privacy</SPAN
+> and pressing
+	  <SPAN
+CLASS="GUIBUTTON"
+>Clear</SPAN
+> on <SPAN
+CLASS="GUILABEL"
+>Cache</SPAN
+>
+	  and <SPAN
+CLASS="GUILABEL"
+>Cookies</SPAN
+>.  Newer versions of
+	  <SPAN
+CLASS="PRODUCTNAME"
+>Firefox</SPAN
+> have the option directly
+	  on the <SPAN
+CLASS="GUIMENUITEM"
+>Tools</SPAN
+> menu (I think).
+	</P
+><P
+>	  Your new Unitcost module is ready to go. Just login and pull
+	  up a task to see the Unicost tab.
+	</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="c52.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x113.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Technical Documentation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c52.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Post-Installation and Configuration</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

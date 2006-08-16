@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Task Log Changes and Related Functionality</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="      dotProject Unitcost Module
+    "
+HREF="index.html"><LINK
+REL="UP"
+TITLE="User Documentation"
+HREF="c182.html"><LINK
+REL="PREVIOUS"
+TITLE="User Documentation"
+HREF="c182.html"><LINK
+REL="NEXT"
+TITLE="Final Notes"
+HREF="x198.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>dotProject Unitcost Module:       User and Technical Documentation
+    </TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="c182.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. User Documentation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x198.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN194"
+>2.2. Task Log Changes and Related Functionality</A
+></H1
+><P
+>	The whole point of the Unicost module is to be able to track
+	cost-based progress along with time-based progress which is
+	the dotProject standard. Furthermore, we have done some
+	changes that force you to update progress through Task Logs
+	instead of doing it directly on the task. You will notice that
+	when you edit the task, the Progress field is now read-only,
+	this is on purpose, and we recommend you do not change this
+	(read on). We also recommend that you prevent users from
+	deleting and editing Task Logs (with Roles and User Security)
+	so you can have an audit trail of progress using the Logs. The
+	Unitcost module enhances the standard dotProject log because
+	it keeps track on historic performance making it easy not only
+	to plot a progress line (or "S" curve) but to do mathematical
+	calculations and estimate or forecast based on the historic
+	trending. If you allow users to edit and delete the logs, you
+	will not be able to take advantage of this enhancement.
+      </P
+><P
+>	When you create a new Task Log, you will notice a new section
+	that is clearly divided and titled "Unit Cost Report". Only
+	tasks with properly configured Unitcosts are allowed to report
+	by unit, of course. You will also notice that we did away with
+	the percentage drop down list and this field is now a decimal
+	number instead of an integer value. If you enter the completed
+	units, it will automatically calculate the accumulated
+	percentage and vice-versa. The rest of the Task Log
+	functionality remains intact, at least with respect to the
+	user. Upon save, nevertheless, the system will now keep track
+	of historic percentage and unitcost values in an extended log
+	table (unitcost_task_log_costs) and will also update the
+	accumulated values in the extended tasks table
+	(unitcost_task_costs). Furthermore, if you view the Project
+	information, you will notice a new field called CProgress
+	which shows current cost-based progress based on the logs and
+	it's complimentary to the standard Progress field (which is
+	time-based).
+      </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="c182.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x198.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>User Documentation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="c182.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Final Notes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
