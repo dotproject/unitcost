@@ -43,7 +43,7 @@
     </author>
     <revhistory>
       <revision>
-	<revnumber>1.0.0</revnumber>
+	<revnumber>1.0.1</revnumber>
 	<date>Tuesday, August 15 2006</date>
 	<authorinitials>AIT</authorinitials>
       </revision>
@@ -505,16 +505,233 @@
       <title>Known bugs and limitations</title>
       <sect2>
 	<title>Version 1.0 / Patch 2.0.3</title>
-	<para>
-	  Reasonable testing has not shown any evident bugs for this
-	  particular release. But there is one issue that was not solved
-	  and its regarding locale. For some reason the module's
-	  specific locale scheme did not work and I simply did not have
-	  time to look further into the issue. You have to translate
-	  to your locale by adding the strings in the Tasks and
-	  Projects section of Translation Management and the patches
-	  to the locale files are not included in this version.
-	</para>
+	<variablelist>
+	  <varlistentry>
+	    <term>Locale</term>
+	    <listitem>
+	      <para>
+		For this release
+		<footnote>
+		  <para>
+		    I tried the module locale but that did not work
+		    for some reason. Hope to get this fixed by the
+		    next release (for 2.0.4).
+		  </para>
+		</footnote>
+		, Locale has to be adjusted manually
+		if you work with a language other than default English
+		language. If so, you need to add the following Locale
+		strings <emphasis>first</emphasis> to the English
+		locale and <emphasis>then</emphasis> to your language:
+		<variablelist>
+		  <varlistentry>
+		    <term>Tasks</term>
+		    <listitem>
+		      <itemizedlist>
+			<listitem>
+			  <para>
+			    Unit costs
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Material Unit Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Equipment Unit Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Labor Unit Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Other Unit Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Total Unit Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Unit of Measure
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Total Units
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Task Total Cost
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Performance
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    per
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Normative Reference
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Normative Description
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Inspection
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Valuation
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Final Valuation
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Closing
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Performance Cannot be Greater Than Total Units!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Unit of Measurement may not be N/A!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Total Units must be greater than zero!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Total Task Cost must be greater than zero!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Performance must be greater than zero!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Percent Complete Cannot be Negative!
+			  </para>
+			</listitem>
+			<listitem>
+			  <para>
+			    Unitcost not configured for this task!
+			  </para>
+			</listitem>
+		      </itemizedlist>
+		    </listitem>
+		  </varlistentry>
+		  <varlistentry>
+		    <term>Projects</term>
+		    <listitem>
+		      <itemizedlist>
+			<listitem>
+			  <para>
+			    CProgress
+			    <note>
+			      <para>
+				This field indicates progress by cost
+				and should be translated to the
+				English locale anyway with a tag name
+				of <quote>Cost Progress</quote> or
+				similar.
+			      </para>
+			    </note>
+			  </para>
+			</listitem>
+		      </itemizedlist>
+		    </listitem>
+		  </varlistentry>
+		</variablelist>
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>NTH-0001 Status: Pending</term>
+	    <listitem>
+	      <para>
+		There is a general NTH (Nice To Have) issue with
+		sub-tasks. If you need to work with sub-tasks in this
+		particular release you should sub-divide the unit
+		costs between all the sub-tasks and
+		<emphasis>not</emphasis> set a general unit cost for
+		the parent task, it's a pain but it is consistent with
+		Task Logs. It would be nice , nevertheless, if unit
+		cost could be configured at the parent task level only
+		and get by the task logs of the children tasks; this
+		may be added in the next immediate release.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>ISSUE-0001 Status: Pending</term>
+	    <listitem>
+	      <para>
+		If you edit a child tasks, the cost of the parent task
+		does not get updated (but the project does
+		perfectly). This should go away next release.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>ISSUE-0002 Status: Pending</term>
+	    <listitem>
+	      <para>
+		This was initially catalogued as a NTH but we feel
+		this is now an issue. The thing is that when you edit
+		a task log, it should bring the progress reported at
+		the time of the task log and not the current
+		accumulated progress (dotProject standard). Since this
+		module enhances the log and keeps track of each
+		progress report, there is no reason why this should
+		remain this way. Next release.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term>ISSUE-0003 Status: Pending</term>
+	    <listitem>
+	      <para>
+		When you update the unit cost configuration of a task
+		that already has some logs, the task and project
+		information will not be updated until the next task
+		log report. Furthermore, all history logs will be
+		calculating the old costs. I am still figuring out the
+		best way to solve this.
+	      </para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
       </sect2>
       <sect2>
 	<title>Future Upgrading Issues</title>
